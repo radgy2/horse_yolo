@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YOLO Inference Demo</title>
+</head>
+<body style="font-family: Arial; margin: 40px;">
+    <h1>🐴 YOLO Horse Detection Demo</h1>
+
+    <p>
+        이미지를 업로드하면 YOLO 모델이 객체를 탐지하고<br>
+        탐지 결과가 표시된 이미지를 반환합니다.
+    </p>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <hr>
+
+    <p style="color: gray; font-size: 12px;">
+        • Supported format: JPG, PNG<br>
+        • If no object is detected, prediction will be marked as failed.
+    </p>
+</body>
+</html>
